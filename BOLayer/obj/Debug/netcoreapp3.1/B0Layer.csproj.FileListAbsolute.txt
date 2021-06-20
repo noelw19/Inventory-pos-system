@@ -1,0 +1,18 @@
+/home/png_boi95/Documents/Projects/C#/BOLayer/bin/Debug/netcoreapp3.1/B0Layer.deps.json
+/home/png_boi95/Documents/Projects/C#/BOLayer/bin/Debug/netcoreapp3.1/B0Layer.dll
+/home/png_boi95/Documents/Projects/C#/BOLayer/bin/Debug/netcoreapp3.1/B0Layer.pdb
+/home/png_boi95/Documents/Projects/C#/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.csproj.AssemblyReference.cache
+/home/png_boi95/Documents/Projects/C#/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.AssemblyInfoInputs.cache
+/home/png_boi95/Documents/Projects/C#/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.AssemblyInfo.cs
+/home/png_boi95/Documents/Projects/C#/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.csproj.CoreCompileInputs.cache
+/home/png_boi95/Documents/Projects/C#/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.dll
+/home/png_boi95/Documents/Projects/C#/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/bin/Debug/netcoreapp3.1/B0Layer.deps.json
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/bin/Debug/netcoreapp3.1/B0Layer.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/bin/Debug/netcoreapp3.1/B0Layer.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.csproj.AssemblyReference.cache
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.AssemblyInfoInputs.cache
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.AssemblyInfo.cs
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.csproj.CoreCompileInputs.cache
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/obj/Debug/netcoreapp3.1/B0Layer.pdb

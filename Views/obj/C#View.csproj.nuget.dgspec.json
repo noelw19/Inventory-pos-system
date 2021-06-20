@@ -1,0 +1,195 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/C#View.csproj": {}
+  },
+  "projects": {
+    "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj",
+        "projectName": "B0Layer",
+        "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj",
+        "packagesPath": "/home/png_boi95/.nuget/packages/",
+        "outputPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/png_boi95/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/129/sdk/5.0.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Singleton/Singleton.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Singleton/Singleton.csproj",
+        "projectName": "Singleton",
+        "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Singleton/Singleton.csproj",
+        "packagesPath": "/home/png_boi95/.nuget/packages/",
+        "outputPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Singleton/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/png_boi95/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj": {
+                "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/129/sdk/5.0.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/C#View.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/C#View.csproj",
+        "projectName": "C#View",
+        "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/C#View.csproj",
+        "packagesPath": "/home/png_boi95/.nuget/packages/",
+        "outputPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/png_boi95/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj": {
+                "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj"
+              },
+              "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Singleton/Singleton.csproj": {
+                "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Singleton/Singleton.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/129/sdk/5.0.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

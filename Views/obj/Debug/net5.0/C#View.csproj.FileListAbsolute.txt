@@ -1,0 +1,34 @@
+/home/png_boi95/Documents/Projects/C#/Views/bin/Debug/net5.0/C#View.deps.json
+/home/png_boi95/Documents/Projects/C#/Views/bin/Debug/net5.0/C#View.dll
+/home/png_boi95/Documents/Projects/C#/Views/bin/Debug/net5.0/ref/C#View.dll
+/home/png_boi95/Documents/Projects/C#/Views/bin/Debug/net5.0/C#View.pdb
+/home/png_boi95/Documents/Projects/C#/Views/obj/Debug/net5.0/C#View.csproj.AssemblyReference.cache
+/home/png_boi95/Documents/Projects/C#/Views/obj/Debug/net5.0/C#View.GeneratedMSBuildEditorConfig.editorconfig
+/home/png_boi95/Documents/Projects/C#/Views/obj/Debug/net5.0/C#View.AssemblyInfoInputs.cache
+/home/png_boi95/Documents/Projects/C#/Views/obj/Debug/net5.0/C#View.AssemblyInfo.cs
+/home/png_boi95/Documents/Projects/C#/Views/obj/Debug/net5.0/C#View.csproj.CoreCompileInputs.cache
+/home/png_boi95/Documents/Projects/C#/Views/obj/Debug/net5.0/C#View.dll
+/home/png_boi95/Documents/Projects/C#/Views/obj/Debug/net5.0/ref/C#View.dll
+/home/png_boi95/Documents/Projects/C#/Views/obj/Debug/net5.0/C#View.pdb
+/home/png_boi95/Documents/Projects/C#/Views/bin/Debug/net5.0/B0Layer.dll
+/home/png_boi95/Documents/Projects/C#/Views/bin/Debug/net5.0/B0Layer.pdb
+/home/png_boi95/Documents/Projects/C#/Views/obj/Debug/net5.0/C#View.csproj.CopyComplete
+/home/png_boi95/Documents/Projects/C#/Views/bin/Debug/net5.0/Singleton.dll
+/home/png_boi95/Documents/Projects/C#/Views/bin/Debug/net5.0/Singleton.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/C#View.deps.json
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/C#View.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/ref/C#View.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/C#View.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/B0Layer.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/Singleton.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/B0Layer.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/Singleton.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/C#View.csproj.AssemblyReference.cache
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/C#View.GeneratedMSBuildEditorConfig.editorconfig
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/C#View.AssemblyInfoInputs.cache
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/C#View.AssemblyInfo.cs
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/C#View.csproj.CoreCompileInputs.cache
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/C#View.csproj.CopyComplete
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/C#View.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/ref/C#View.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/C#View.pdb

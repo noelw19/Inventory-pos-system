@@ -1,0 +1,46 @@
+/home/png_boi95/Documents/Projects/C#/ATM/obj/Debug/net5.0/C#.csproj.AssemblyReference.cache
+/home/png_boi95/Documents/Projects/C#/ATM/obj/Debug/net5.0/C#.GeneratedMSBuildEditorConfig.editorconfig
+/home/png_boi95/Documents/Projects/C#/ATM/obj/Debug/net5.0/C#.AssemblyInfoInputs.cache
+/home/png_boi95/Documents/Projects/C#/ATM/obj/Debug/net5.0/C#.AssemblyInfo.cs
+/home/png_boi95/Documents/Projects/C#/ATM/obj/Debug/net5.0/C#.csproj.CoreCompileInputs.cache
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/C#
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/C#.deps.json
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/C#.runtimeconfig.json
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/C#.runtimeconfig.dev.json
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/C#.dll
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/ref/C#.dll
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/C#.pdb
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/C#View.dll
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/C#View.pdb
+/home/png_boi95/Documents/Projects/C#/ATM/obj/Debug/net5.0/C#.csproj.CopyComplete
+/home/png_boi95/Documents/Projects/C#/ATM/obj/Debug/net5.0/C#.dll
+/home/png_boi95/Documents/Projects/C#/ATM/obj/Debug/net5.0/ref/C#.dll
+/home/png_boi95/Documents/Projects/C#/ATM/obj/Debug/net5.0/C#.pdb
+/home/png_boi95/Documents/Projects/C#/ATM/obj/Debug/net5.0/C#.genruntimeconfig.cache
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/B0Layer.dll
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/B0Layer.pdb
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/Singleton.dll
+/home/png_boi95/Documents/Projects/C#/ATM/bin/Debug/net5.0/Singleton.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/C#
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/C#.deps.json
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/C#.runtimeconfig.json
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/C#.runtimeconfig.dev.json
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/C#.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/ref/C#.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/C#.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/B0Layer.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/C#View.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/Singleton.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/C#View.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/B0Layer.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/Singleton.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/C#.csproj.AssemblyReference.cache
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/C#.GeneratedMSBuildEditorConfig.editorconfig
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/C#.AssemblyInfoInputs.cache
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/C#.AssemblyInfo.cs
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/C#.csproj.CoreCompileInputs.cache
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/C#.csproj.CopyComplete
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/C#.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/ref/C#.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/C#.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/C#.genruntimeconfig.cache

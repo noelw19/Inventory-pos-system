@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "B0Layer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/B0Layer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/B0Layer.dll": {}
+        }
+      },
+      "C#View/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "B0Layer": "1.0.0",
+          "Singleton": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/C#View.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/C#View.dll": {}
+        }
+      },
+      "Singleton/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "B0Layer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Singleton.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Singleton.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "B0Layer/1.0.0": {
+      "type": "project",
+      "path": "../BOLayer/B0Layer.csproj",
+      "msbuildProject": "../BOLayer/B0Layer.csproj"
+    },
+    "C#View/1.0.0": {
+      "type": "project",
+      "path": "../Views/C#View.csproj",
+      "msbuildProject": "../Views/C#View.csproj"
+    },
+    "Singleton/1.0.0": {
+      "type": "project",
+      "path": "../Singleton/Singleton.csproj",
+      "msbuildProject": "../Singleton/Singleton.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "B0Layer >= 1.0.0",
+      "C#View >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/png_boi95/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/C#.csproj",
+      "projectName": "C#",
+      "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/C#.csproj",
+      "packagesPath": "/home/png_boi95/.nuget/packages/",
+      "outputPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/png_boi95/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj": {
+              "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj"
+            },
+            "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/C#View.csproj": {
+              "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/C#View.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/129/sdk/5.0.301/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

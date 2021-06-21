@@ -59,14 +59,22 @@ public class AdminInformation
         // Else if we have a friend with this name
         else
         {
-            if (this.adminDictionary.Remove(name))
+            Console.WriteLine("dictionary count: {0}", this.adminDictionary.Count);
+            if(this.adminDictionary.Count > 1)
             {
-                Console.WriteLine(name + " had been removed successfully.");
+                if (this.adminDictionary.Remove(name))
+                {
+                    Console.WriteLine(name + " had been removed successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("Unable to remove " + name);
+                } // end if
+            } //count if statement end
+            else 
+            {
+                Console.WriteLine("Error cannot delete last admin");
             }
-            else
-            {
-                Console.WriteLine("Unable to remove " + name);
-            } // end if
         } // end if
     } // end public bool RemoveFriend(string name)
  
@@ -127,10 +135,11 @@ public class AdminInformation
         // If we have saved information about friends
         if (this.adminDictionary.Count > 0)
         {
+            Console.WriteLine(this.adminDictionary.Values.Count);
             foreach (Admin admin in this.adminDictionary.Values)
             {
-                Console.WriteLine("\nUsername: " + admin.Username);
-                Console.WriteLine("Pin: " + admin.Pin + "\n");
+                Console.WriteLine("\n\tUsername: " + admin.Username);
+                Console.WriteLine("\tPin: " + admin.Pin + "\n");
             } // end foreach
         }
         else

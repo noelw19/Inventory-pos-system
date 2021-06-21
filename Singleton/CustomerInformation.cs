@@ -141,9 +141,9 @@ public class CustomerInformation
         {
             foreach (Customer customer in this.customerDictionary.Values)
             {
-                Console.WriteLine("\n" + "Name: " + customer.Name);
-                Console.WriteLine("Username: " + customer.Username);
-                Console.WriteLine("Pin: " + customer.Pin + "\n");
+                Console.WriteLine("\n" + "\tName: " + customer.Name);
+                Console.WriteLine("\tUsername: " + customer.Username);
+                Console.WriteLine("\tPin: " + customer.Pin + "\n");
             } // end foreach
         }
         else

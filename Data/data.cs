@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using B0Layer;
 
 namespace Data
 {
@@ -27,19 +28,21 @@ namespace Data
             int option;
             string errMessage;
             Console.Clear();
-            if(errVal == 0) errMessage = "Error enter a valid option number!\nEnter 1 or 2:";
-            else errMessage = "Enter 1 or 2:";
+            if(errVal == 0) errMessage = "Error enter a valid option number!\nEnter corresponding number:";
+            else errMessage = "Enter corresponding number:";
             
             Console.WriteLine("What would you like to do?\n");
             //shows orders made, with customerid, prodId, DateOfOrder, totalPrice
             Console.WriteLine("\t\t1.List orders\n");
             //List all registered customers and admins
-            Console.WriteLine("\t\t2.List users\n");
-            Console.WriteLine("\t\t3.List all products and details\n");
-            Console.WriteLine("\t\t4.Add product to inventory\n");
+            Console.WriteLine("\t\t2.List users -WORKING\n");
+            Console.WriteLine("\t\t3.List all products and details -WORKING\n");
+            Console.WriteLine("\t\t4.Add product to inventory -WORKING\n");
             Console.WriteLine("\t\t5.Update product\n");
-            Console.WriteLine("\t\t6.Remove user\n");
-            Console.WriteLine("\t\t7.Delete order\n");
+            Console.WriteLine("\t\t6.Remove user -WORKING\n");
+            Console.WriteLine("\t\t7.Remove product from catalog\n");
+            Console.WriteLine("\t\t8.Delete order\n");
+            Console.WriteLine("\t\t9.Logout -WORKING\n");
             Console.WriteLine(errMessage);
             
             try
@@ -53,12 +56,26 @@ namespace Data
                         Console.ReadLine();
                         break;
                     case 2:
-                        Console.WriteLine("option 2 chosen!");
+                        CustomerInformation ci = CustomerInformation.Instance();
+                        AdminInformation ai = AdminInformation.Instance();
+                        ci.Load();
+                        ai.Load();
+                        Console.WriteLine("\n\t\t========Admins========");
+                        ai.Print();
+                        Console.WriteLine("\t\t========Customers========");
+                        ci.Print();
+                        Console.WriteLine("Press Enter to continue....");
                         Console.ReadLine();
+                        adminMenu();
                         break;
                     case 3:
-                        Console.WriteLine("option 3 chosen!");
+                        ProductInformation pi = ProductInformation.Instance();
+                        pi.Load();
+                        Console.Clear();
+                        pi.Print();
+                        Console.WriteLine("\nPress Enter to continue....");
                         Console.ReadLine();
+                        adminMenu();
                         break;
                     case 4:
                         AddProduct();
@@ -68,12 +85,23 @@ namespace Data
                         Console.ReadLine();
                         break;
                     case 6:
-                        Console.WriteLine("option 6 chosen!");
+                        removeUser();
                         Console.ReadLine();
                         break;
                     case 7:
                         Console.WriteLine("option 7 chosen!");
                         Console.ReadLine();
+                        break;
+                    case 8:
+                        Console.WriteLine("option 8 chosen!");
+                        Console.ReadLine();
+                        break;
+                    case 9:
+                        // View view = new View();
+                        Console.Clear();
+                        Console.WriteLine("Logged out...");
+                        //arg 1 to show that it has not been called from an error
+                        // view.loginScreen(2);
                         break;
                 }
             }
@@ -84,6 +112,55 @@ namespace Data
                 throw;
             }
             
+        }
+
+        private void removeUser(int errVal = 1)
+        {
+            string errMessage = "";
+            int option;
+            if(errVal == 0) errMessage = "Error enter valid option..";
+            Console.WriteLine("Remove: \n\t1.Administrator\n\t2.Customer");
+            {if(errVal == 0) Console.WriteLine(errMessage);}
+            try
+            {
+                option = int.Parse(Console.ReadLine());
+                switch (option)
+                {
+                    case 1:
+                        AdminInformation ai = AdminInformation.Instance();
+                        string adminName;
+                        ai.Load();
+                        Console.WriteLine("Enter the username of the admin account to remove:");
+                        adminName = Console.ReadLine();
+                        ai.RemoveAdmin(adminName);
+                        ai.Save();
+                        ai.Print();
+                        Console.WriteLine("Press Enter to continue....");
+                        Console.ReadLine();
+                        adminMenu();
+                        break;
+                    case 2:
+                        CustomerInformation ci = CustomerInformation.Instance();
+                        string custName;
+                        ci.Load();
+                        Console.WriteLine("Enter the username of the customer account to remove:");
+                        custName = Console.ReadLine();
+                        ci.RemoveCustomer(custName);
+                        ci.Save();
+                        ci.Print();
+                        Console.WriteLine("Press Enter to continue....");
+                        Console.ReadLine();
+                        adminMenu();
+                        break;
+                }
+            }
+            catch (System.Exception)
+            {
+                Console.Clear();
+                removeUser(0);
+                throw;
+            }
+
         }
 
         private void AddProduct() {
@@ -125,6 +202,8 @@ namespace Data
                 else continue;
             }
             Console.WriteLine("Success!");
+            Console.WriteLine("Returning to admin menu....");
+            adminMenu();
 
 
         }

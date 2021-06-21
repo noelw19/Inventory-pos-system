@@ -57,7 +57,6 @@ namespace B0Layer
         public string Status { get; set; }
         public int AccountNo { get; set; }
 
-        private Dictionary<string, Customer> customerDictionary;
 
 
     }

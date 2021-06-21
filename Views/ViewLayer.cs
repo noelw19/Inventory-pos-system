@@ -15,9 +15,9 @@ namespace ViewLayer
             CustomerInformation ci = CustomerInformation.Instance();
             ci.Load();
             int ch;
-            string errMessage;
+            string errMessage = "Enter 1 or 2:";
             if(errVal == 0) errMessage = "Error enter a valid option number!\nEnter 1 or 2:";
-            else errMessage = "Enter 1 or 2:";
+            
 
             Console.WriteLine("-----Inventory System-----\n\n" +
                             "What do you want to do:\n" +
@@ -139,6 +139,7 @@ namespace ViewLayer
             switch(ch) {
                 case 1:
                     AdminInformation ai = AdminInformation.Instance();
+                    ai.Load();
 
                     Console.Clear();
                     Console.WriteLine("\t\t========Register as Administrator========");
@@ -149,14 +150,14 @@ namespace ViewLayer
                     pin = Console.ReadLine();
                     ai.AddAdmin(username, pin);
                     ai.Save();
-                    ai.Load();
                     ai.Print();
-
+                    Console.ReadLine();
                     break;
                 case 2: 
 
                     CustomerInformation ci = CustomerInformation.Instance();
                     
+                    ci.Load();
                     Console.Clear();
                     Console.WriteLine("\t\t========Register as Customer========");
                     Console.WriteLine("Enter first name");
@@ -171,8 +172,8 @@ namespace ViewLayer
                     pin = Console.ReadLine();
                     ci.AddFriend(name, username, pin);
                     ci.Save();
-                    ci.Load();
                     ci.Print();
+                    Console.ReadLine();
                     break;
             }
             }

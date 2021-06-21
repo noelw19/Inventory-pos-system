@@ -44,3 +44,5 @@
 /home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/ref/C#.dll
 /home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/C#.pdb
 /home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/obj/Debug/net5.0/C#.genruntimeconfig.cache
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/data.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/ATM/bin/Debug/net5.0/data.pdb

@@ -17,13 +17,27 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "B0Layer": "1.0.0",
-          "Singleton": "1.0.0"
+          "Singleton": "1.0.0",
+          "data": "1.0.0"
         },
         "compile": {
           "bin/placeholder/C#View.dll": {}
         },
         "runtime": {
           "bin/placeholder/C#View.dll": {}
+        }
+      },
+      "data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Singleton": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/data.dll": {}
         }
       },
       "Singleton/1.0.0": {
@@ -51,6 +65,11 @@
       "type": "project",
       "path": "../Views/C#View.csproj",
       "msbuildProject": "../Views/C#View.csproj"
+    },
+    "data/1.0.0": {
+      "type": "project",
+      "path": "../Data/data.csproj",
+      "msbuildProject": "../Data/data.csproj"
     },
     "Singleton/1.0.0": {
       "type": "project",

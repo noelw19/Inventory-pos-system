@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "data/1.0.0": {
+        "dependencies": {
+          "Singleton": "1.0.0"
+        },
+        "runtime": {
+          "data.dll": {}
+        }
+      },
+      "B0Layer/1.0.0": {
+        "runtime": {
+          "B0Layer.dll": {}
+        }
+      },
+      "Singleton/1.0.0": {
+        "dependencies": {
+          "B0Layer": "1.0.0"
+        },
+        "runtime": {
+          "Singleton.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "B0Layer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Singleton/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

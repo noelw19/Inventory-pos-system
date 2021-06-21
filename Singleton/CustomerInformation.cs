@@ -69,6 +69,18 @@ public class CustomerInformation
             } // end if
         } // end if
     } // end public bool RemoveFriend(string name)
+
+    public string getName(string username)
+    {
+        foreach(Customer customer in this.customerDictionary.Values)
+            {
+                if(customer.Username == username)
+                {
+                    return customer.Name;
+                }
+            }
+                return username;
+    }
  
     public void Save()
     {

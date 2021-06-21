@@ -9,7 +9,8 @@
       "C#View/1.0.0": {
         "dependencies": {
           "B0Layer": "1.0.0",
-          "Singleton": "1.0.0"
+          "Singleton": "1.0.0",
+          "data": "1.0.0"
         },
         "runtime": {
           "C#View.dll": {}
@@ -18,6 +19,14 @@
       "B0Layer/1.0.0": {
         "runtime": {
           "B0Layer.dll": {}
+        }
+      },
+      "data/1.0.0": {
+        "dependencies": {
+          "Singleton": "1.0.0"
+        },
+        "runtime": {
+          "data.dll": {}
         }
       },
       "Singleton/1.0.0": {
@@ -37,6 +46,11 @@
       "sha512": ""
     },
     "B0Layer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

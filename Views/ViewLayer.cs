@@ -3,53 +3,73 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using B0Layer;
+using Data;
 
 namespace ViewLayer
 {
     public class View 
     {
-        public void loginScreen()
+        public void loginScreen(int errVal)
         {
+            if(errVal == 1) Console.Clear();
             CustomerInformation ci = CustomerInformation.Instance();
-            Console.Clear();
             ci.Load();
-            ci.Print();
             int ch;
+            string errMessage;
+            if(errVal == 0) errMessage = "Error enter a valid option number!\nEnter 1 or 2:";
+            else errMessage = "Enter 1 or 2:";
+
             Console.WriteLine("-----Inventory System-----\n\n" +
                             "What do you want to do:\n" +
                             "1----Register----\n" +
                             "2----Login----\n\n" +
-                            "Enter 1 or 2:");
-
+                            errMessage);
             
-            ch = int.Parse(Console.ReadLine());
-            switch (ch) 
+            
+            try
             {
-                case 1:
-                    Console.Clear();
-                    registerCustomer();
-                    break;
-                case 2:
-                    Console.Clear();
-                    login();
-                    break;
+                ch = int.Parse(Console.ReadLine());
+                switch (ch) 
+                {
+                    case 1:
+                        Console.Clear();
+                        registerCustomer(1);
+                        break;
+                    case 2:
+                        Console.Clear();
+                        login(1);
+                        break;
 
+                }
+            }
+            catch (System.Exception)
+            {
+                Console.Clear();
+                loginScreen(0);
+                throw;
             }
 
         }
 
-        public void login() 
+        public void login(int errVal) 
         {
             int ch;
             string username;
             string pin;
+            string errMessage;
             Console.Clear();
+            if(errVal == 0) errMessage = "Error enter a valid option number!\nEnter 1 or 2:";
+            else errMessage = "Enter 1 or 2:";
+
             Console.WriteLine("-----Welcome to ATM-----\n\n" +
                             "Login as:\n" +
                             "1----Administrator----\n" +
                             "2----Customer----\n\n" +
-                            "Enter 1 or 2:");
-            ch = int.Parse(Console.ReadLine());
+                            errMessage);
+            
+            try
+            {
+                ch = int.Parse(Console.ReadLine());
             switch (ch)
             {
                 case 1:
@@ -65,7 +85,8 @@ namespace ViewLayer
                         Console.WriteLine("Login success!");
                         Admin_Welcome(username);
                     } else {
-                        Console.WriteLine("Error " + username + ": " + pin + "invalid");
+                        Console.WriteLine("Error " + username + ": " + pin + "is invalid\nPress enter to continue....");
+                        Console.ReadLine();
                     }
                     break;
                 case 2:
@@ -81,27 +102,40 @@ namespace ViewLayer
                         Console.WriteLine("Login success!");
                         Customer_Welcome(username);
                     } else {
-                        Console.WriteLine("Error " + username + ": " + pin + "invalid");
+                        Console.WriteLine("Error " + username + ": " + pin + " is invalid\nPress enter to continue....");
+                        Console.ReadLine();
+                        
                     }
                     break;
+            }
+            }
+            catch (System.Exception)
+            {
+                Console.Clear();
+                login(0);
+                throw;
             }
 
         }
 
-        public void registerCustomer() 
+        public void registerCustomer(int errVal) 
         {
             string pin;
             string username;
             string name;
             int ch;
+            string errMessage;
             Console.Clear();
+            if(errVal == 0) errMessage = "Error enter a valid option number!\nEnter 1 or 2:";
+            else errMessage = "Enter 1 or 2:";
             Console.WriteLine("-----Welcome to ATM-----\n\n" +
                             "Register as:\n" +
                             "1----Administrator----\n" +
                             "2----Customer----\n\n" +
-                            "Enter 1 or 2:");
-            ch = int.Parse(Console.ReadLine());
-            
+                            errMessage);
+            try
+            {
+                ch = int.Parse(Console.ReadLine());
             switch(ch) {
                 case 1:
                     AdminInformation ai = AdminInformation.Instance();
@@ -141,16 +175,31 @@ namespace ViewLayer
                     ci.Print();
                     break;
             }
+            }
+            catch (System.Exception)
+            {
+                Console.Clear();
+                registerCustomer(0);
+                throw;
+            }
         }
 
         public void Admin_Welcome(string username) 
         {
             Console.WriteLine("\n\t===========Welcome " + username + "===========\n");
+            DataView view = new DataView();
+            view.adminMenu();
+            
         }
 
         public void Customer_Welcome(string username)
         {
-            Console.WriteLine("\n\t===========Welcome " + username + "===========\n");
+            CustomerInformation ci = CustomerInformation.Instance();
+            ci.Load();
+            string name = ci.getName(username);
+            Console.WriteLine("\n\t===========Welcome " + name + "===========\n");
+            DataView view = new DataView();
+            view.customerMenu();
         }
     }
 }

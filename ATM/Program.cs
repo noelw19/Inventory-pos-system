@@ -8,21 +8,26 @@ namespace C_
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
             
-            View view = new View();
-            view.loginScreen();
-
-            
-            
-            List<string> strList = new List<string>();
-            strList.Add("Test");
-            strList.Add("Of");
-            strList.Add("NetCore");
-
-            foreach(var str in strList){
-                Console.WriteLine(str);
+            while(true)
+            {
+                View view = new View();
+                //arg 1 to show that it has not been called from an error
+                view.loginScreen(1);
+                continue;
             }
+
+            
+            
+            // List<string> strList = new List<string>();
+            // strList.Add("Test");
+            // strList.Add("Of");
+            // strList.Add("NetCore");
+
+            // foreach(var str in strList){
+            //     Console.WriteLine(str);
+            // }
         }
     }
 }

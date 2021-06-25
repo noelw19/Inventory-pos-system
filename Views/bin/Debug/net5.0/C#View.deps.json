@@ -10,7 +10,7 @@
         "dependencies": {
           "B0Layer": "1.0.0",
           "Singleton": "1.0.0",
-          "data": "1.0.0"
+          "menuView": "1.0.0"
         },
         "runtime": {
           "C#View.dll": {}
@@ -21,12 +21,12 @@
           "B0Layer.dll": {}
         }
       },
-      "data/1.0.0": {
+      "menuView/1.0.0": {
         "dependencies": {
           "Singleton": "1.0.0"
         },
         "runtime": {
-          "data.dll": {}
+          "menuView.dll": {}
         }
       },
       "Singleton/1.0.0": {
@@ -50,7 +50,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "data/1.0.0": {
+    "menuView/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

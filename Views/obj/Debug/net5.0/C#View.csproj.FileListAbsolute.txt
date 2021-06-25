@@ -32,5 +32,5 @@
 /home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/C#View.dll
 /home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/ref/C#View.dll
 /home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/obj/Debug/net5.0/C#View.pdb
-/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/data.dll
-/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/data.pdb
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/menuView.dll
+/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/bin/Debug/net5.0/menuView.pdb

@@ -7,6 +7,6 @@
   <ItemGroup>
       <ProjectReference Include="..\BOLayer\B0Layer.csproj" />
       <ProjectReference Include="..\Singleton\Singleton.csproj" />
-      <ProjectReference Include="..\Data\data.csproj" />
+      <ProjectReference Include="..\menuView\menuView.csproj" />
     </ItemGroup>
   </Project>

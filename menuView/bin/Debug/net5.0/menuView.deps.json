@@ -6,36 +6,17 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "C#/1.0.0": {
-        "dependencies": {
-          "B0Layer": "1.0.0",
-          "C#View": "1.0.0"
-        },
-        "runtime": {
-          "C#.dll": {}
-        }
-      },
-      "B0Layer/1.0.0": {
-        "runtime": {
-          "B0Layer.dll": {}
-        }
-      },
-      "C#View/1.0.0": {
-        "dependencies": {
-          "B0Layer": "1.0.0",
-          "Singleton": "1.0.0",
-          "menuView": "1.0.0"
-        },
-        "runtime": {
-          "C#View.dll": {}
-        }
-      },
       "menuView/1.0.0": {
         "dependencies": {
           "Singleton": "1.0.0"
         },
         "runtime": {
           "menuView.dll": {}
+        }
+      },
+      "B0Layer/1.0.0": {
+        "runtime": {
+          "B0Layer.dll": {}
         }
       },
       "Singleton/1.0.0": {
@@ -49,22 +30,12 @@
     }
   },
   "libraries": {
-    "C#/1.0.0": {
+    "menuView/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "B0Layer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "C#View/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "menuView/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

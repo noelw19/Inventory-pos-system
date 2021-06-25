@@ -50,11 +50,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Data/data.csproj",
-      "projectName": "data",
-      "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Data/data.csproj",
+      "projectUniqueName": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/menuView/menuView.csproj",
+      "projectName": "menuView",
+      "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/menuView/menuView.csproj",
       "packagesPath": "/home/png_boi95/.nuget/packages/",
-      "outputPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Data/obj/",
+      "outputPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/menuView/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/png_boi95/.nuget/NuGet/NuGet.Config"

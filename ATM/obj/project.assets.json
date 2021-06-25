@@ -18,7 +18,7 @@
         "dependencies": {
           "B0Layer": "1.0.0",
           "Singleton": "1.0.0",
-          "data": "1.0.0"
+          "menuView": "1.0.0"
         },
         "compile": {
           "bin/placeholder/C#View.dll": {}
@@ -27,17 +27,17 @@
           "bin/placeholder/C#View.dll": {}
         }
       },
-      "data/1.0.0": {
+      "menuView/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Singleton": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/data.dll": {}
+          "bin/placeholder/menuView.dll": {}
         },
         "runtime": {
-          "bin/placeholder/data.dll": {}
+          "bin/placeholder/menuView.dll": {}
         }
       },
       "Singleton/1.0.0": {
@@ -66,10 +66,10 @@
       "path": "../Views/C#View.csproj",
       "msbuildProject": "../Views/C#View.csproj"
     },
-    "data/1.0.0": {
+    "menuView/1.0.0": {
       "type": "project",
-      "path": "../Data/data.csproj",
-      "msbuildProject": "../Data/data.csproj"
+      "path": "../menuView/menuView.csproj",
+      "msbuildProject": "../menuView/menuView.csproj"
     },
     "Singleton/1.0.0": {
       "type": "project",

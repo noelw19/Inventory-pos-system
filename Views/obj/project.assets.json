@@ -12,17 +12,17 @@
           "bin/placeholder/B0Layer.dll": {}
         }
       },
-      "data/1.0.0": {
+      "menuView/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Singleton": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/data.dll": {}
+          "bin/placeholder/menuView.dll": {}
         },
         "runtime": {
-          "bin/placeholder/data.dll": {}
+          "bin/placeholder/menuView.dll": {}
         }
       },
       "Singleton/1.0.0": {
@@ -46,10 +46,10 @@
       "path": "../BOLayer/B0Layer.csproj",
       "msbuildProject": "../BOLayer/B0Layer.csproj"
     },
-    "data/1.0.0": {
+    "menuView/1.0.0": {
       "type": "project",
-      "path": "../Data/data.csproj",
-      "msbuildProject": "../Data/data.csproj"
+      "path": "../menuView/menuView.csproj",
+      "msbuildProject": "../menuView/menuView.csproj"
     },
     "Singleton/1.0.0": {
       "type": "project",
@@ -61,7 +61,7 @@
     "net5.0": [
       "B0Layer >= 1.0.0",
       "Singleton >= 1.0.0",
-      "data >= 1.0.0"
+      "menuView >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -92,11 +92,11 @@
             "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj": {
               "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj"
             },
-            "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Data/data.csproj": {
-              "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Data/data.csproj"
-            },
             "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Singleton/Singleton.csproj": {
               "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Singleton/Singleton.csproj"
+            },
+            "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/menuView/menuView.csproj": {
+              "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/menuView/menuView.csproj"
             }
           }
         }

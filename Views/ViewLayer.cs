@@ -1,9 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using B0Layer;
-using Data;
+using menuView;
 
 namespace ViewLayer
 {
@@ -188,7 +184,7 @@ namespace ViewLayer
         public void Admin_Welcome(string username) 
         {
             Console.WriteLine("\n\t===========Welcome " + username + "===========\n");
-            DataView view = new DataView();
+            MenuView view = new MenuView();
             view.adminMenu();
             
         }
@@ -200,7 +196,7 @@ namespace ViewLayer
             string name = ci.getName(username);
             int id = ci.getId(username);
             Console.WriteLine("\n\t===========Welcome " + name + "===========\n");
-            DataView view = new DataView();
+            MenuView view = new MenuView();
             view.customerMenu(id);
         }
     }

@@ -1,8 +1,8 @@
 using System;
 
-namespace Data
+namespace menuView
 {
-    public class DataView 
+    public class MenuView 
     {
         int custId;
 
@@ -152,7 +152,7 @@ namespace Data
             Console.WriteLine("\t\t5.Update product\n");
             Console.WriteLine("\t\t6.Remove user -WORKING\n");
             Console.WriteLine("\t\t7.Remove product from catalog\n");
-            Console.WriteLine("\t\t8.Delete order\n");
+            Console.WriteLine("\t\t8.Delete order -Working\n");
             Console.WriteLine("\t\t9.Logout -WORKING\n");
             Console.WriteLine(errMessage);
             

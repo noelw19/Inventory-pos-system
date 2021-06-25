@@ -170,7 +170,7 @@ namespace ViewLayer
                     Console.WriteLine("\t\t========Register as Customer========");
                     Console.WriteLine("Enter pin");
                     pin = Console.ReadLine();
-                    ci.AddFriend(name, username, pin);
+                    ci.AddFriend(ci.ProdCount(), name, username, pin);
                     ci.Save();
                     ci.Print();
                     Console.ReadLine();
@@ -198,9 +198,10 @@ namespace ViewLayer
             CustomerInformation ci = CustomerInformation.Instance();
             ci.Load();
             string name = ci.getName(username);
+            int id = ci.getId(username);
             Console.WriteLine("\n\t===========Welcome " + name + "===========\n");
             DataView view = new DataView();
-            view.customerMenu();
+            view.customerMenu(id);
         }
     }
 }

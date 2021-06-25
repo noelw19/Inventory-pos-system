@@ -9,5 +9,4 @@
       <ProjectReference Include="..\Singleton\Singleton.csproj" />
       <ProjectReference Include="..\Data\data.csproj" />
     </ItemGroup>
-
-</Project>
+  </Project>

@@ -8,15 +8,26 @@ namespace B0Layer
     [Serializable]
     public class Customer
     {
+
         private string username;
+        private int id = 0;
         private string  pin;
         private string  name;
         // Data members for Customer class
-        public Customer(string name, string username, string pin) {
+        public Customer(int id, string name, string username, string pin) {
+            this.id = id + 1;
             this.name = name;
             this.username = username;
             this.pin = pin;
         }
+
+        public int Id { get
+            {
+                return this.id;
+            } set
+            {
+                this.id = value;
+            } }
 
         public string Username 
         { 

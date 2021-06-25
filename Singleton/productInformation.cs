@@ -82,6 +82,23 @@ public class ProductInformation
                 return 000;
     }
 
+    public string getName(int id)
+    {
+        foreach(Product product in this.productDictionary.Values)
+            {
+                if(product.Id == id)
+                {
+                    return product.Name;
+                }
+            }
+                return "Id Error";
+    }
+
+    public int ProdCount()
+    {
+        return this.productDictionary.Count;
+    }
+
     // public void updateProduct(string name)
 
  
@@ -144,10 +161,12 @@ public class ProductInformation
         {
             foreach (Product product in this.productDictionary.Values)
             {
-                Console.WriteLine("\n" + "Name: " + product.Name);
-                Console.WriteLine("Supplier: " + product.Supplier);
-                Console.WriteLine("Stock Level: " + product.Stock);
-                Console.WriteLine("Type: " + product.Type + "\n");
+                Console.WriteLine("\n\t\tId: " + product.Id);
+                Console.WriteLine("\t\tName: " + product.Name);
+                Console.WriteLine("\t\tSupplier: " + product.Supplier);
+                Console.WriteLine("\t\tStock Level: " + product.Stock);
+                Console.WriteLine("\t\tType: " + product.Type + "\n");
+                Console.WriteLine("----------------------------------------------------------\n");
             } // end foreach
         }
         else
@@ -156,17 +175,6 @@ public class ProductInformation
         } // end if
     } // end public void Print()
 
-    // public bool CheckCredentials(string username, string pin) 
-    // {
-    //         foreach(Product product in this.productDictionary.Values)
-    //         {
-    //             if(product.Username == username && product.Pin == pin)
-    //             {
-    //                 return true;
-    //             }
-    //         }
-    //         return false;
-        
-    // }
+
  
 } // end public class FriendsInformation

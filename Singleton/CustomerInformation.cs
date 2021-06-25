@@ -32,7 +32,7 @@ public class CustomerInformation
         this.formatter = new BinaryFormatter();
     } // end private FriendsInformation()
  
-    public void AddFriend(string name, string username, string pin)
+    public void AddFriend(int id, string name, string username, string pin)
     {
         // If we already had added a friend with this name
         if (this.customerDictionary.ContainsKey(name) || this.customerDictionary.ContainsKey(username))
@@ -44,7 +44,7 @@ public class CustomerInformation
         else
         {
             // Add him in the dictionary
-            this.customerDictionary.Add(name, new Customer(name, username, pin));
+            this.customerDictionary.Add(name, new Customer(id, name, username, pin));
             Console.WriteLine("Customer added successfully.");
         } // end if
     } // end public bool AddFriend(string name, string email)
@@ -80,6 +80,23 @@ public class CustomerInformation
                 }
             }
                 return username;
+    }
+
+    public int getId(string username)
+    {
+        foreach(Customer customer in this.customerDictionary.Values)
+            {
+                if(customer.Username == username)
+                {
+                    return customer.Id;
+                }
+            }
+                return 0;
+    }
+
+    public int ProdCount()
+    {
+        return this.customerDictionary.Count;
     }
  
     public void Save()
@@ -141,7 +158,8 @@ public class CustomerInformation
         {
             foreach (Customer customer in this.customerDictionary.Values)
             {
-                Console.WriteLine("\n" + "\tName: " + customer.Name);
+                Console.WriteLine("\n" + "\tId: " + customer.Id);
+                Console.WriteLine("\tName: " + customer.Name);
                 Console.WriteLine("\tUsername: " + customer.Username);
                 Console.WriteLine("\tPin: " + customer.Pin + "\n");
             } // end foreach

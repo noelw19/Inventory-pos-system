@@ -1,28 +1,139 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using B0Layer;
 
 namespace Data
 {
     public class DataView 
     {
-        
-        public void customerMenu()
+        int custId;
+
+//------------------------------CUSTOMER MENU CODE---------------------------------
+        public void customerMenu(int id, int errVal = 1)
         {
+            this.custId = id;
+            int option;
+            string errMessage;
+            if(errVal == 0) errMessage = "Error enter valid line number!";
+            else errMessage = "Enter corresponding line number";
             Console.WriteLine("What would you like to do?\n");
             //List store products
-            Console.WriteLine("\t\t1.List products\n");
+            Console.WriteLine("\t\t1.List products_WORKING\n");
             //order items and all items are added to an order list and dated
-            Console.WriteLine("\t\t2.Order Item\n");
+            Console.WriteLine("\t\t2.Order Item--WORKING\n");
             //previous order
-            Console.WriteLine("\t\t4.Last order\n");
+            Console.WriteLine("\t\t3.Last order--WORKING\n");
             //all orders
-            Console.WriteLine("\t\t5.Order History\n");
-            Console.ReadLine();
+            Console.WriteLine("\t\t4.Order History__WORKING\n");
+            Console.WriteLine("\t\t5.Log out\n");
+            Console.WriteLine("{0}", errMessage);
+            
+            try
+            {
+                OrderInformation oi = OrderInformation.Instance();
+                option = int.Parse(Console.ReadLine());
+
+                switch (option)
+                {
+                    case 1:
+                        printProd();
+                        customerMenu(this.custId);
+                        break;
+                    case 2:
+                        printProd();
+                        order();
+                        customerMenu(this.custId);
+                        break;
+                    case 3:
+                        oi.Load();
+                        Console.Clear();
+                        oi.PrintLatest(this.custId);
+                        Console.WriteLine("Press Enter to continue....");
+                        Console.ReadLine();
+                        customerMenu(this.custId);
+                        break;
+                    case 4:
+                        oi.Load();
+                        Console.SetCursorPosition(0, 0);
+                        oi.PrintMyOrders(this.custId);
+                        Console.WriteLine("Press Enter to continue....");
+                        Console.ReadLine();
+                        customerMenu(this.custId);
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Console.WriteLine("Logged out...");
+                        break;
+                }
+            }
+            catch (System.Exception)
+            {
+                Console.Clear();
+                customerMenu(this.custId, 0);
+                throw;
+            }
         }
 
+        public void order()
+        {
+            int custId = this.custId;
+            int[] prodId = new int[15];
+            string readme;
+            int count = 0;
+            DateTime date = DateTime.Now;
+            ProductInformation pi = ProductInformation.Instance();
+            pi.Load();
+
+            //maybe adding a confirmation per readline to make sure data is correct
+
+            while(true) {
+                Console.WriteLine("Awesome!! Time to Order items!");
+                Console.WriteLine("Enter Product id:");
+                readme = Console.ReadLine();
+                if(readme == "End" || readme == "end") {
+                    break;
+                } else {
+                    if(intDataConfimation(int.Parse(readme), "Id")) {
+                        if(int.Parse(readme) != 0)
+                        {
+                            prodId[count] = int.Parse(readme);
+                            count++;
+                            continue;
+                        }
+                    }
+                    else {
+                        Console.WriteLine("Error only enter numbers");
+                        continue;
+                }}
+            }
+            
+            var oi = OrderInformation.Instance();
+            oi.Load();
+            foreach (var item in prodId)
+            {
+                if(item != 0) {
+                    Console.WriteLine("{0} <--", item);
+                }
+            }
+            oi.AddOrder(oi.ProdCount(), custId, prodId, date);
+            oi.Save();
+            oi.Print();
+            Console.ReadLine();
+            
+            Console.WriteLine("Returning to menu....");
+        }
+
+        public void printProd(){
+                ProductInformation pi = ProductInformation.Instance();
+                pi.Load();
+                Console.Clear();
+                pi.Print();
+                Console.WriteLine("\nPress Enter to continue....");                    
+                Console.ReadLine();
+        }
+
+
+
+// -----------------------------ADMINISTRATOR MENU CODE---------------------------------
+        
         public void adminMenu(int errVal = 1)
         {
             int option;
@@ -33,7 +144,7 @@ namespace Data
             
             Console.WriteLine("What would you like to do?\n");
             //shows orders made, with customerid, prodId, DateOfOrder, totalPrice
-            Console.WriteLine("\t\t1.List orders\n");
+            Console.WriteLine("\t\t1.List orders -WORKING\n");
             //List all registered customers and admins
             Console.WriteLine("\t\t2.List users -WORKING\n");
             Console.WriteLine("\t\t3.List all products and details -WORKING\n");
@@ -52,8 +163,13 @@ namespace Data
                 switch(option)
                 {
                     case 1:
-                        Console.WriteLine("option 1 chosen!");
+                        OrderInformation oi = OrderInformation.Instance();
+                        oi.Load();
+                        Console.WriteLine("\n--------------------ALL ORDERS--------------------\n\n");
+                        oi.Print();
+                        Console.WriteLine("Press any key to return to menu...");
                         Console.ReadLine();
+                        adminMenu();
                         break;
                     case 2:
                         CustomerInformation ci = CustomerInformation.Instance();
@@ -93,8 +209,8 @@ namespace Data
                         Console.ReadLine();
                         break;
                     case 8:
-                        Console.WriteLine("option 8 chosen!");
-                        Console.ReadLine();
+                        deleteOrder();
+                        adminMenu();
                         break;
                     case 9:
                         // View view = new View();
@@ -111,7 +227,69 @@ namespace Data
                 adminMenu(0);
                 throw;
             }
-            
+        }
+
+        private void deleteOrder()
+        {
+            printOrders();
+            Console.WriteLine("Please enter order Id to remove that order..." + '\n' + "Type cancel to go back...");
+            string option = Console.ReadLine();
+            int intValue;
+            //tryparse checks if the first arg can be converted to int then stores the converted value
+            //within the intValue interger variable
+            try
+            {
+                bool isInt = int.TryParse(option, out intValue);
+            if(isInt){ 
+                OrderInformation oi = OrderInformation.Instance();
+                string option1;
+                oi.Load();
+                oi.PrintById(intValue);
+                Console.WriteLine("Are you sure you want to remove this order?" + '\n' + "Y or N");
+                option1 = Console.ReadLine();
+                if(oi.checkValidId(intValue)) {
+                    switch (option1)
+                    {
+                        case "Y":
+                            oi.RemoveOrder(intValue);
+                            oi.Save();
+                            break;
+                        case "N":
+                            deleteOrder();
+                            break;
+                        case "y":
+                            oi.RemoveOrder(intValue);
+                            oi.Save();
+                            break;
+                        case "n":
+                            deleteOrder();
+                            break;
+                    }
+                };
+                Console.WriteLine("Returning to menu...");
+                adminMenu();
+            }
+            switch (option)
+            {
+                case "cancel":
+                    Console.Clear();
+                    adminMenu();
+                    break;
+            }
+            }
+            catch (System.Exception)
+            {
+                adminMenu();
+                throw;
+            }
+        }
+
+        private void printOrders()
+        {
+            OrderInformation oi = OrderInformation.Instance();
+            oi.Load();
+            oi.Print();
+
         }
 
         private void removeUser(int errVal = 1)
@@ -168,7 +346,6 @@ namespace Data
             string supplier;
             string type;
             int stockLevel;
-            int option;
 
             //maybe adding a confirmation per readline to make sure data is correct
 
@@ -201,11 +378,15 @@ namespace Data
                 if(intDataConfimation(stockLevel, "quantity in stock")) break;
                 else continue;
             }
-            Console.WriteLine("Success!");
+            ProductInformation pi = ProductInformation.Instance();
+            pi.Load();
+            pi.AddProduct(pi.ProdCount(), name, type, supplier, stockLevel);
+            pi.Save();
+            pi.Print();
+            Console.ReadLine();
+            
             Console.WriteLine("Returning to admin menu....");
             adminMenu();
-
-
         }
 
         private bool strDataConfimation(string data = "NULL", string dataKey = "NULL", int errVal = 1)
@@ -218,7 +399,7 @@ namespace Data
             if(data != "NULL" && dataKey != "NULL")
             {
                 Console.WriteLine("You entered " + data + " as the product " + dataKey + "\nIs this correct?");
-                Console.WriteLine("Y or N");
+                Console.WriteLine(errMessage);
                 try
                 {
                     option = Console.ReadLine();
@@ -226,16 +407,12 @@ namespace Data
                     {
                         case "Y":
                             return true;
-                            break;
                         case "N":
                             return false;
-                            break;
                         case "y":
                             return true;
-                            break;
                         case "n":
                             return false;
-                            break;
                     }
                 }
                 catch (System.Exception)
@@ -251,14 +428,14 @@ namespace Data
         private bool intDataConfimation(int val = 0,string valKey = "NULL", int errVal = 1)
         {
             string option;
-            string errMessage;
             Console.Clear();
+            string errMessage;
             if(errVal == 0) errMessage = "Error enter 'Y' or 'N'...";
             else errMessage = "Enter 'Y' or 'N':";
             if(val != 0 && valKey != "NULL")
             {
                 Console.WriteLine("You entered " + val + " as the product " + valKey + "\nIs this correct?");
-                Console.WriteLine("Y or N");
+                Console.WriteLine(errMessage);
                 try
                 {
                     option = Console.ReadLine();
@@ -266,16 +443,14 @@ namespace Data
                     {
                         case "Y":
                             return true;
-                            break;
                         case "N":
                             return false;
-                            break;
                         case "y":
                             return true;
-                            break;
                         case "n":
                             return false;
-                            break;
+                        default:
+                            return true;
                     }
                 }
                 catch (System.Exception)

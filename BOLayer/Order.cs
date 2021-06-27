@@ -10,10 +10,14 @@ namespace B0Layer
         private int orderId = 0;
         private int customerId;
         private int[] productId;
+
+        private int[] productAmount;
         private string prods = "";
+
+        private string orderAmount = "";
         private DateTime dateNow;
 
-        public Order(int id, int customerId, int[] productId, DateTime date)
+        public Order(int id, int customerId, int[] productId, int[] productAmount, DateTime date)
         {
             this.customerId = customerId;
             int count = 0;
@@ -26,6 +30,18 @@ namespace B0Layer
                     this.prods += item.ToString() + comma;
                     count++;
                     Console.WriteLine("{0}", this.prods);
+                }
+            }
+
+            foreach (var item in productAmount)
+            {
+                if(item != 0)
+                {
+                    string comma = ""; 
+                    if(productAmount[count + 1] != 0) comma = ",";
+                    this.orderAmount += item.ToString() + comma;
+                    count++;
+                    Console.WriteLine("{0}", this.orderAmount);
                 }
             }
             this.dateNow = date;
@@ -53,12 +69,25 @@ namespace B0Layer
             return this.prods;
         }}
 
+        public string Amounts { get
+        {
+            return this.orderAmount;
+        }}
+
         public int[] ProductIds { get
         {
             return this.productId;
         } set
         {
             this.productId = value;
+        }}
+
+        public int[] ProductAmount { get
+        {
+            return this.productAmount;
+        } set
+        {
+            this.productAmount = value;
         }}
 
         public DateTime DateNow { get

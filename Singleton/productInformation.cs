@@ -48,6 +48,16 @@ public class ProductInformation
             Console.WriteLine("Product added successfully.");
         } // end if
     } // end public bool AddFriend(string name, string email)
+
+    public void updateStock(int id, int amountToRemove)
+    {
+        foreach (Product prod in this.productDictionary.Values)
+        {
+            if (prod.Id == id){
+                prod.UpdateStock(amountToRemove);
+            }
+        }
+    }
  
     public void RemoveProduct(string name)
     {

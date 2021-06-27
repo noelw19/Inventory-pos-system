@@ -12,7 +12,7 @@
           "bin/placeholder/B0Layer.dll": {}
         }
       },
-      "C#View/1.0.0": {
+      "loginView/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
@@ -21,10 +21,10 @@
           "menuView": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/C#View.dll": {}
+          "bin/placeholder/loginView.dll": {}
         },
         "runtime": {
-          "bin/placeholder/C#View.dll": {}
+          "bin/placeholder/loginView.dll": {}
         }
       },
       "menuView/1.0.0": {
@@ -61,10 +61,10 @@
       "path": "../BOLayer/B0Layer.csproj",
       "msbuildProject": "../BOLayer/B0Layer.csproj"
     },
-    "C#View/1.0.0": {
+    "loginView/1.0.0": {
       "type": "project",
-      "path": "../Views/C#View.csproj",
-      "msbuildProject": "../Views/C#View.csproj"
+      "path": "../LoginView/loginView.csproj",
+      "msbuildProject": "../LoginView/loginView.csproj"
     },
     "menuView/1.0.0": {
       "type": "project",
@@ -80,7 +80,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "B0Layer >= 1.0.0",
-      "C#View >= 1.0.0"
+      "loginView >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -111,8 +111,8 @@
             "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj": {
               "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/BOLayer/B0Layer.csproj"
             },
-            "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/C#View.csproj": {
-              "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/Views/C#View.csproj"
+            "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/LoginView/loginView.csproj": {
+              "projectPath": "/home/png_boi95/Documents/c# Projects/Inventory-pos-system/LoginView/loginView.csproj"
             }
           }
         }
@@ -141,7 +141,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/129/sdk/5.0.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.301/RuntimeIdentifierGraph.json"
       }
     }
   }

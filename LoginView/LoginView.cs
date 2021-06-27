@@ -1,9 +1,9 @@
 using System;
 using menuView;
 
-namespace ViewLayer
+namespace LoginView
 {
-    public class View 
+    public class Login 
     {
         public void loginScreen(int errVal)
         {

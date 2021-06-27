@@ -77,7 +77,7 @@ namespace menuView
             int custId = this.custId;
             int[] prodId = new int[15];
             string readme;
-            int count = 0;
+            int Match = 0;
             DateTime date = DateTime.Now;
             ProductInformation pi = ProductInformation.Instance();
             pi.Load();
@@ -85,7 +85,7 @@ namespace menuView
             //maybe adding a confirmation per readline to make sure data is correct
 
             while(true) {
-                Console.WriteLine("Awesome!! Time to Order items!");
+                Console.WriteLine('\n' + "Awesome!! Time to Order items!");
                 Console.WriteLine("Enter Product id:");
                 readme = Console.ReadLine();
                 if(readme == "End" || readme == "end") {
@@ -94,8 +94,8 @@ namespace menuView
                     if(intDataConfimation(int.Parse(readme), "Id")) {
                         if(int.Parse(readme) != 0)
                         {
-                            prodId[count] = int.Parse(readme);
-                            count++;
+                            prodId[Match] = int.Parse(readme);
+                            Match++;
                             continue;
                         }
                     }
@@ -106,16 +106,53 @@ namespace menuView
             }
             
             var oi = OrderInformation.Instance();
-            oi.Load();
-            foreach (var item in prodId)
+            // int MatcherForStockUpdate = 0;
+            // string[] productNameAndAmount;
+            string[] prodNames = new string[prodId.Length];
+            int[] prodAmounts = new int[prodId.Length];
+            int[] newProdId = new int[prodId.Length];
+            int instanceMatch = 0;
+
+            // -------for loop to check find how many of each product was bought----
+            for (int i = 0; i < prodId.Length; i++)
             {
-                if(item != 0) {
-                    Console.WriteLine("{0} <--", item);
+                int prodMatch = 0;
+                int choice = prodId[i];
+                for (int j = 0; j < prodId.Length; j++)
+                {
+                    //if a match is found between the item searching for and the array to check
+                    if(prodId[i] == prodId[j]) {
+                        //1 is addded to instance match to show the amount of times this
+                        //product has been ordered within this order instance.
+                        instanceMatch++;
+                        //the first instance where the searching for items is found it is 
+                        //added to the new prod id array, to show it has been ordered
+                        if(prodMatch == 0) {
+                            newProdId[prodMatch] = prodId[i];
+                        }
+                        //prodMatch updated to onliy add the first instance of the product.
+                        prodMatch++;
+                        }
+                    if(prodId[i] == prodId[j] && prodMatch > 1 && i < j) {
+                        instanceMatch--;
+                        //FINISH CODE HERE------------------------------------------------------------------------------------------------------------
+                    }
                 }
+
+                prodAmounts[i] = instanceMatch;
+                instanceMatch = 0; 
+                prodMatch = 0;
+                
             }
-            oi.AddOrder(oi.ProdCount(), custId, prodId, date);
+            
+            for (int i = 0; i < prodAmounts.Length; i++)
+            {
+                Console.WriteLine("Amount: {0}" + '\n' + "Id: {1}", prodAmounts[i], newProdId[i]);
+            }
+            oi.AddOrder(oi.ProdCount(), custId, newProdId, prodAmounts, date);
             oi.Save();
-            oi.Print();
+            oi.Load();
+            oi.PrintMyOrders(custId);
             Console.ReadLine();
             
             Console.WriteLine("Returning to menu....");
@@ -308,7 +345,7 @@ namespace menuView
                         AdminInformation ai = AdminInformation.Instance();
                         string adminName;
                         ai.Load();
-                        Console.WriteLine("Enter the username of the admin account to remove:");
+                        Console.WriteLine("Enter the username of the admin acMatch to remove:");
                         adminName = Console.ReadLine();
                         ai.RemoveAdmin(adminName);
                         ai.Save();
@@ -321,7 +358,7 @@ namespace menuView
                         CustomerInformation ci = CustomerInformation.Instance();
                         string custName;
                         ci.Load();
-                        Console.WriteLine("Enter the username of the customer account to remove:");
+                        Console.WriteLine("Enter the username of the customer acMatch to remove:");
                         custName = Console.ReadLine();
                         ci.RemoveCustomer(custName);
                         ci.Save();

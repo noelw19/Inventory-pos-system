@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace B0Layer
 {
@@ -20,6 +18,13 @@ namespace B0Layer
             this.type = type;
             this.supplier = supplier;
             this.quantityInStock = quantityInStock;
+        }
+
+        public void UpdateStock(int amountToRemove)
+        {
+            Console.WriteLine("Removing..");
+            this.quantityInStock = quantityInStock - amountToRemove;
+            Console.WriteLine("Stock Level Updated!");
         }
 
         public int Id
@@ -47,5 +52,6 @@ namespace B0Layer
             get {return this.quantityInStock;}
             set {this.quantityInStock = value;}
         }
+
     }
 }

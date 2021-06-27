@@ -7,7 +7,7 @@
   </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Views\C#View.csproj" />
+      <ProjectReference Include="..\LoginView\loginView.csproj" />
       <ProjectReference Include="..\BOLayer\B0Layer.csproj" />
     </ItemGroup>
 

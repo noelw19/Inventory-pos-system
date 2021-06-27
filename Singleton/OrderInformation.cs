@@ -34,7 +34,7 @@ public class OrderInformation
         this.formatter = new BinaryFormatter();
     } // end private FriendsInformation()
  
-    public void AddOrder(int id, int customerId, int[] productIds, DateTime date)
+    public void AddOrder(int id, int customerId, int[] productIds, int[] orderAmounts, DateTime date)
     {
         // If we already had added a friend with this name
         if (this.orderDictionary.ContainsKey(id))
@@ -46,7 +46,7 @@ public class OrderInformation
         else
         {
             // Add him in the dictionary
-            this.orderDictionary.Add(id, new Order(id, customerId, productIds, date));
+            this.orderDictionary.Add(id, new Order(id, customerId, productIds, orderAmounts, date));
             Console.WriteLine("Order successful.");
         } // end if
     } // end public bool AddFriend(string name, string email)
@@ -193,10 +193,11 @@ public class OrderInformation
                 // if(order.Id == lastOrder.Id)
                 // {
                     Console.WriteLine("\n\t\t----------LATEST ORDER RECEIPT----------");
-                    Console.WriteLine("\n" + "\tReceipt ID: " + order.Id);
+                    Console.WriteLine("\t\nReceipt ID: " + order.Id);
                     Console.WriteLine("\tCustomer Id: " + order.CustomerId);
                     Console.WriteLine("\tDate ordered: " + order.DateNow + "\n");
                     Console.WriteLine("\tProducts Ordered: \n");
+                    int count = 0;
                     foreach (char prodId in order.Prods)
                     {
                         if(prodId == ',')
@@ -211,7 +212,25 @@ public class OrderInformation
                             pi.Load();
                             int valId = int.Parse(prodId.ToString());
                             string name = pi.getName(valId);
-                            Console.WriteLine("\t\tId: " + prodId + "\n\t\tName: " + name +"\n");
+                            Console.WriteLine("\t\tAmount ordered: "  + order.ProductAmount[count++].ToString() + "\nId: " + prodId + "\n\t\tName: " + name +"\n");
+                            check++;
+                        }
+                     }
+                     foreach (char prodId in order.Prods)
+                    {
+                        if(prodId == ',')
+                        {
+                            continue;
+                        }
+                        else 
+                        {
+                            // possibly code logic to show items and quanity oredered
+                            //instead of printing all orders may have to change on the customer menu side 
+                            ProductInformation pi = ProductInformation.Instance();
+                            pi.Load();
+                            int valId = int.Parse(prodId.ToString());
+                            string name = pi.getName(valId);
+                            Console.WriteLine("\t\tAmount ordered: "  + order.ProductAmount[count++].ToString() + "\nId: " + prodId + "\n\t\tName: " + name +"\n");
                             check++;
                         }
                      }
@@ -301,9 +320,23 @@ public class OrderInformation
                         pi.Load();
                         int valId = int.Parse(prodId.ToString());
                         string name = pi.getName(valId);
-                        Console.WriteLine("\t\tId: " + prodId + "\n\t\tName: " + name +"\n");
+                        Console.WriteLine("\t\t" + "Id: " + prodId + "\n\t\tName: " + name +"\n");
                     }
                 }
+
+                foreach (char amnts in order.Amounts)
+                    {
+                        if(amnts == ',')
+                        {
+                            continue;
+                        }
+                        else 
+                        {
+                            // possibly code logic to show items and quanity oredered
+                            //instead of printing all orders may have to change on the customer menu side 
+                            Console.WriteLine("\t\t\nId: " + amnts +"\n");
+                        }
+                     }
             } // end foreach
         }
         else

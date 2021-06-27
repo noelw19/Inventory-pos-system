@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using ViewLayer;
-using B0Layer;
+﻿using LoginView;
 
 namespace C_
 {
@@ -12,7 +9,7 @@ namespace C_
             
             while(true)
             {
-                View view = new View();
+                Login view = new Login();
                 //arg 1 to show that it has not been called from an error
                 view.loginScreen(1);
                 continue;
